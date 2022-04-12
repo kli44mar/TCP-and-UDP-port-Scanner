@@ -5,7 +5,7 @@
 Пользователь вводит ip-адрес в формате IPv4, начальное значение и конечное значение диапазона через пробел.
 Найденные открытые порты выводятся на консоль.
 # Пример запуска
-python ports.py 127.0.0.1 120 150
+*python ports.py 127.0.0.1 120 150
 ![image](https://user-images.githubusercontent.com/71692931/163009880-761b76d5-a147-4541-a72d-507a6c522b77.png)
 ![image](https://user-images.githubusercontent.com/71692931/163010279-4fc99bd7-290c-4c9a-af1d-bc21e3965c6f.png)
 
