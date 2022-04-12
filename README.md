@@ -8,6 +8,6 @@
 python ports.py 127.0.0.1 120 150
 
 
-![image](https://user-images.githubusercontent.com/71692931/163009880-761b76d5-a147-4541-a72d-507a6c522b77.png)
-![image](https://user-images.githubusercontent.com/71692931/163010279-4fc99bd7-290c-4c9a-af1d-bc21e3965c6f.png)
+![image](https://user-images.githubusercontent.com/71692931/163013424-ee5b94e1-e3fa-4624-ac52-3fd392bd82e2.png)
+![image](https://user-images.githubusercontent.com/71692931/163012460-105edca5-0234-47aa-87b5-5229845f9c93.png)
 
