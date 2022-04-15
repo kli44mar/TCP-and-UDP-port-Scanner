@@ -11,24 +11,26 @@ def scan_port_tcp(host, port):
         sock.settimeout(0.5)
         sock.connect((host, port))
         print('Tcp Port :', port, ' is open.')
-    except:
+    except socket.error:
         pass
     finally:
         sock.close()
 
 
 def scan_port_udp(host, port):
-    '''(SOCK_DGRAM - соединение типа UDP) В Udp нет понятия сооединения, как в Tcp, поэтому, чтобы проверить открыт ли порт,
-     надо отправить запрос на этот порт. Если есть ответ, порт открыт, но так как отправляется недействительная команда,
-     то время ожидания будет превышать, но порт будет открыт'''
+    '''(SOCK_DGRAM - соединение типа TCP) В Udp нет понятия сооединения, как в Tcp, поэтому, чтобы проверить открыт ли порт,
+     надо отправить запрос на этот порт. Если есть ответ, то порт открыт.
+     Также время ожидания ответа может превышать установленное, но при этом порт будет открыт'''
+
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
-        sock.sendto(b'', (host, port))
+        sock.sendto(b'data', (host, port))
         sock.settimeout(0.5)
         sock.recvfrom(1024)
+        print('Udp Port :', port, ' is open.')
     except socket.timeout:
-         print('Udp Port :', port, ' is open.')
-    except:
+        print('Udp Port :', port, ' is open.')
+    except socket.error:
         pass
     finally:
         sock.close()
